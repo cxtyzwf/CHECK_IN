@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".check.CheckActivity"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/date_show"
+            android:text="@string/date_choose"
+            android:visibility="visible"
+            android:gravity="center"
+            android:onClick="date_choose"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date_choose_ok"
+            android:id="@+id/date_choose"
+            android:visibility="visible"
+            android:onClick="date_choose_ok"/>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="55.2dp"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+
+        <RadioButton
+            android:id="@+id/bt_1"
+            style="@style/home_navigation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/check_late"
+            android:onClick="check_late"/>
+
+
+        <RadioButton
+            android:id="@+id/bt_2"
+            style="@style/home_navigation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/check_leave"
+        android:onClick="check_leave"/>
+
+
+        <RadioButton
+            android:id="@+id/bt_3"
+            style="@style/home_navigation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/check_date"
+        android:onClick="check_date"/>
+
+
+    </RadioGroup>
+</LinearLayout>
