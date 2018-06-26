@@ -18,15 +18,16 @@
             android:layout_weight="1"
             android:id="@+id/date_show"
             android:text="@string/date_choose"
-            android:visibility="visible"
+            android:visibility="gone"
             android:gravity="center"
-            android:onClick="date_choose"/>
+            android:onClick="date_choose"
+            android:textSize="18sp" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/date_choose_ok"
             android:id="@+id/date_choose"
-            android:visibility="visible"
+            android:visibility="gone"
             android:onClick="date_choose_ok"/>
     </LinearLayout>
     <android.support.v7.widget.RecyclerView
@@ -45,7 +46,8 @@
         android:layout_height="55.2dp"
         android:layout_gravity="bottom"
         android:background="#FFFFFF"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:checkedButton="@id/bt_1">
 
 
         <RadioButton

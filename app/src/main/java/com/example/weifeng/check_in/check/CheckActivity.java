@@ -1,9 +1,11 @@
 package com.example.weifeng.check_in.check;
 
+import android.nfc.Tag;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -47,6 +49,7 @@ public class CheckActivity extends AppCompatActivity {
     public void check_late(View view) {
         date_show.setVisibility(View.GONE);
         date_choose.setVisibility(View.GONE);
+        Log.e("按钮选择测试","XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
     }
 
     public void check_leave(View view) {
@@ -57,11 +60,18 @@ public class CheckActivity extends AppCompatActivity {
     public void check_date(View view) {
         date_show.setVisibility(View.VISIBLE);
         date_choose.setVisibility(View.VISIBLE);
+
     }
 
     public void date_choose(View view) {
+        DatePickerFragment fragment = new DatePickerFragment();
+        fragment.show(getSupportFragmentManager(),"time");
 }
 
     public void date_choose_ok(View view) {
+    }
+
+    public void setText(int year,int month,int day){
+        date_show.setText(year+"-"+month+"-"+day);
     }
 }
